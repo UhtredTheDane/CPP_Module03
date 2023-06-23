@@ -63,18 +63,26 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    std::cout << "ClapTrap " << name << " takes " << amount << " points of damage." << std::endl;
-    hit_points -= amount;
+    if (hit_points <= 0)
+        std::cout << "ClapTrap " << name << " is already dead." << std::endl;
+    else
+    {
+        std::cout << "ClapTrap " << name << " takes " << amount << " points of damage." << std::endl;
+        hit_points -= amount;
+    }
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (hit_points > 0 && energy_points > 0)
+    if (hit_points <= 0)
+        std::cout << "ClapTrap " << name << " has not enough hit points to repair." << std::endl;
+    else if (energy_points <= 0)
+        std::cout << "ClapTra^p " << name << " has not enough energy points to repair." << std::endl;
+    else
     {
         std::cout << "ClapTrap " << name << " fix himself of " << amount << " hit points." << std::endl;
         hit_points += amout;
         --energy_points;
     }
-    else
-        std::cout << "I have not enough mana !" << std::endl;
+
 }
