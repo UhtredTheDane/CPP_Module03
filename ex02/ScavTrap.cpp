@@ -1,17 +1,26 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap(void) 
+    : name("ScavTrap"),
+    hit_points(100), 
+    energy_points(50), 
+    attack_damage(20)
+{
+    std::cout << "I am the ScavTrap !"<< std::endl;
+}
+
 ScavTrap::ScavTrap(std::string name)
     : ClapTrap(name)
 {
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
-    std::cout << "Creation ScavTrap" << std::endl;
+    std::cout << "ScavTrap " << name << " is born !" << std::endl;
 }
 
 ScavTrap::~ScavTrap(void)
 {
-    std::cout << "Destruction ScavTrap" << std::endl;
+    std::cout << "ScavTrap " << name << " is broken." << std::endl;
 }
 
 void attack(const std::string& target)

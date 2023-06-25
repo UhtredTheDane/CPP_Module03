@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
 NAME = harlFilter
-SRC= ClapTrap.cpp main.cpp
+SRC= DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
 
