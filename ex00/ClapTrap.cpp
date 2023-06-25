@@ -31,7 +31,7 @@ ClapTrap::ClapTrap& operator=(ClapTrap const& toAffect)
 {
     if (this != &toAffect)
     {
-        std::cout << "ClapTrap " << toAffect.name << " is affect to ClapTrap " << name << std::endl;
+        std::cout << "ClapTrap " << toAffect.name << " is affect to ClapTrap " << name  << "." << std::endl;
         name = toAffect.name;
         hit_points = toAffect.hit_points;
         energy_points = toAffect.energy_points;
@@ -47,10 +47,15 @@ ClapTrap::~ClapTrap(void)
     std::cout << "ClapTrap " << name << " is broken." << std::endl;
 }
 
+std::string ClapTrap::getName(void)
+{
+    return (name);
+}
+
 void ClapTrap::attack(const std::string& target)
 {   
     if (hit_points <= 0)
-        std::cout << "ClapTrap " << name << " has not enough hit points to attack." << std::endl;
+        std::cout << "ClapTrap " << name << " is already dead, he can't attack" << std::endl;
     else if (energy_points <= 0)
         std::cout << "ClapTra^p " << name << " has not enough energy points to attack." << std::endl;
     else
@@ -75,7 +80,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 void ClapTrap::beRepaired(unsigned int amount)
 {
     if (hit_points <= 0)
-        std::cout << "ClapTrap " << name << " has not enough hit points to repair." << std::endl;
+        std::cout << "ClapTrap " << name << " is already dead, he can't be repaired." << std::endl;
     else if (energy_points <= 0)
         std::cout << "ClapTra^p " << name << " has not enough energy points to repair." << std::endl;
     else
