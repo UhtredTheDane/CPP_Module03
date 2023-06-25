@@ -23,7 +23,7 @@ ScavTrap::~ScavTrap(void)
     std::cout << "ScavTrap " << name << " is broken." << std::endl;
 }
 
-void attack(const std::string& target)
+void ScavTrap::attack(const std::string& target)
 {
     if (hit_points <= 0)
         std::cout << "ScavTrap " << name << " is already dead, he can't attack " << target << "." << std::endl;
@@ -37,7 +37,7 @@ void attack(const std::string& target)
     }
 }
 
-void takeDamage(unsigned int amount)
+void ScavTrap::takeDamage(unsigned int amount)
 {
     if (hit_points <= 0)
         std::cout << "ScavTrap " << name << " is already dead." << std::endl;
@@ -48,7 +48,7 @@ void takeDamage(unsigned int amount)
     }
 }
 
-void beRepaired(unsigned int amount)
+void ScavTrap::beRepaired(unsigned int amount)
 {
     if (hit_points <= 0)
         std::cout << "ScavTrap " << name << " is already dead, he can't be repaired." << std::endl;
@@ -62,7 +62,10 @@ void beRepaired(unsigned int amount)
     }
 }
 
-void guardGate()
+void ScavTrap::guardGate(void)
 {
-    std::cout << "ScavTrap " << name << " is entering in Gate keeper mode." << std::endl;
+    if (hit_points <= 0)
+        std::cout << "ScavTrap " << name << " is dead, he can't switch his mode." << std::endl;
+    else
+        std::cout << "ScavTrap " << name << " enters Gate keeper mode." << std::endl;
 }

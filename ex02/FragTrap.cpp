@@ -23,7 +23,7 @@ FragTrap::FragTrap(std::string name)
     std::cout << "FragTrap " << name << " is broken." << std::endl;
 }
 
-void attack(const std::string& target)
+void FragTrap::attack(const std::string& target)
 {
     if (hit_points <= 0)
         std::cout << "FragTrap " << name << " is already dead, he can't attack " << target << "." << std::endl;
@@ -37,7 +37,7 @@ void attack(const std::string& target)
     }
 }
 
-void takeDamage(unsigned int amount)
+void FragTrap::takeDamage(unsigned int amount)
 {
     if (hit_points <= 0)
         std::cout << "FragTrap " << name << " is already dead." << std::endl;
@@ -48,7 +48,7 @@ void takeDamage(unsigned int amount)
     }
 }
 
-void beRepaired(unsigned int amount)
+void FragTrap::beRepaired(unsigned int amount)
 {
     if (hit_points <= 0)
         std::cout << "FragTrap " << name << " is already dead, he can't be repaired." << std::endl;
@@ -62,7 +62,10 @@ void beRepaired(unsigned int amount)
     }
 }
 
-void highFivesGuys(void)
+void FragTrap::highFivesGuys(void)
 {
-
+    if (hit_points <= 0)
+        std::cout << "FragTrap " << name << " is dead, he can't make a high five." << std::endl;
+    else
+        std::cout << "FragTrap " << name << " would like to do a high five !" << std::endl;
 }
