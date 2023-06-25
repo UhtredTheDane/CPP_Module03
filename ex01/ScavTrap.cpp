@@ -1,1 +1,59 @@
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap(std::string name)
+    : ClapTrap(name)
+{
+    hit_points = 100;
+    energy_points = 50;
+    attack_damage = 20;
+    std::cout << "Creation ScavTrap" << std::endl;
+}
+
+ScavTrap::~ScavTrap(void)
+{
+    std::cout << "Destruction ScavTrap" << std::endl;
+}
+
+void attack(const std::string& target)
+{
+    if (hit_points <= 0)
+        std::cout << "ScavTrap " << name << " is already dead, he can't attack " << target << "." << std::endl;
+    else if (energy_points <= 0)
+        std::cout << "ScavTrap " << name << " has not enough energy points to attack " << target <<"." << std::endl;
+    else
+    {
+        std::cout << "ScavTrap " << name << " attacks " << target << ", causing " 
+            << attack_damage << " points of damage." << std::endl;
+        --energy_points;
+    }
+}
+
+void takeDamage(unsigned int amount)
+{
+    if (hit_points <= 0)
+        std::cout << "ScavTrap " << name << " is already dead." << std::endl;
+    else
+    {
+        std::cout << "ScavTrap " << name << " takes " << amount << " points of damage." << std::endl;
+        hit_points -= amount;
+    }
+}
+
+void beRepaired(unsigned int amount)
+{
+    if (hit_points <= 0)
+        std::cout << "ScavTrap " << name << " is already dead, he can't be repaired." << std::endl;
+    else if (energy_points <= 0)
+        std::cout << "ScavTrap " << name << " has not enough energy points to repair." << std::endl;
+    else
+    {
+        std::cout << "ScavTrap " << name << " fix himself of " << amount << " hit points." << std::endl;
+        hit_points += amount;
+        --energy_points;
+    }
+}
+
+void guardGate()
+{
+    std::cout << "ScavTrap " << name << " is entering in Gate keeper mode." << std::endl;
+}
