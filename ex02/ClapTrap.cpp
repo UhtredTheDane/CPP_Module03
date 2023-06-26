@@ -20,10 +20,8 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(ClapTrap const& toCopy)
 	: name(toCopy.name),
-    hit_points(toCopy.hit_points),
-    energy_points(toCopy.energy_points),
-    attack_damage(toCopy.attack_damage)
 {
+	*this = toCopy;
     std::cout << "Copy of the CalpTrap " << name << "." << std::endl;
 }
 
