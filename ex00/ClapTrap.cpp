@@ -19,7 +19,7 @@ ClapTrap::ClapTrap(std::string name)
 }
 
 ClapTrap::ClapTrap(ClapTrap const& toCopy)
-	: name(toCopy.name),
+	: name(toCopy.name)
 {
 	*this = toCopy;
     std::cout << "Copy of the CalpTrap " << name << "." << std::endl;

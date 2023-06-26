@@ -20,7 +20,7 @@ ScavTrap::ScavTrap(std::string name)
 }
 
 ScavTrap::ScavTrap(ScavTrap const& toCopy)
-	: ScavTrap(toCopy),
+	: ClapTrap(toCopy)
 {
     std::cout << "Copy of the ScavTrap " << name << "." << std::endl;
 }
