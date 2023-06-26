@@ -47,6 +47,11 @@ ClapTrap::~ClapTrap(void)
     std::cout << "ClapTrap " << name << " is broken." << std::endl;
 }
 
+int ClapTrap::getAttackDamage(void)
+{
+    return (attack_damage);
+}
+
 std::string ClapTrap::getName(void)
 {
     return (name);

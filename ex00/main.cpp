@@ -2,26 +2,42 @@
 
 int main(void)
 {
-    ClapTrap c1("Yugi");
-    ClapTrap c2("Kaiba");
-  	ClapTrap c3("Makuba");
-	ClapTrap c4(c1);
+    ClapTrap yugi("Yugi");
+    ClapTrap kaiba("Kaiba");
+  	ClapTrap makuba("Makuba");
+	ClapTrap yugiCopy(c1);
 	
-    c2.attack(c1.getName());
-    c1.beRepaired(1);
-	c3 = c2;
-	c4.attack(c2.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
+    kaiba.attack(yugi.getName());
+	yugi.takeDamage(kaiba.getAttackDamage());
+    yugi.beRepaired(1);
+	
+	yugiCopy.attack(kaiba.getName());
+	kaiba.takeDamage(yugiCopy.getAttackDamage());
+
+	makuba.attack(yugi.getName());
+	yugi.takeDamage(makuba.getAttackDamage());
+
+	makuba = kaiba;
+
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	makuba.attack(yugiCopy.getName());
+	yugiCopy.takeDamage(makuba.getAttackDamage());
+	
+	makuba.attack(yugiCopy.getName());
+	makuba.attack(yugiCopy.getName());
 
     return (0);
 }

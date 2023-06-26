@@ -12,7 +12,9 @@ class ClapTrap
         ClapTrap& operator=(ClapTrap const& toAffect);
         ~ClapTrap(void);
 	
+        int getAttackDamage(void);
 	std::string getName(void);
+
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
