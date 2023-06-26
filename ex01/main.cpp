@@ -5,8 +5,8 @@ int main(void)
 {
     ClapTrap yugi("Yugi");
     ScavTrap kaiba("Kaiba");
-	ScavTrap yugiCopy(c1);
 	ScavTrap yamiYugi("Yami Yugi");
+    ClapTrap yugiCopy(yamiYugi);
 
     kaiba.attack(yugi.getName());
 	yugi.takeDamage(kaiba.getAttackDamage());

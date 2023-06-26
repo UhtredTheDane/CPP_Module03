@@ -1,11 +1,12 @@
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void) 
-    : name("ScavTrap"),
-    hit_points(100), 
-    energy_points(50), 
-    attack_damage(20)
 {
+	name = "ScavTrap";
+    	hit_points = 100;
+    	energy_points = 50; 
+    	attack_damage = 20;
+
     std::cout << "I am the ScavTrap !"<< std::endl;
 }
 
