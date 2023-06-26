@@ -19,6 +19,12 @@ ScavTrap::ScavTrap(std::string name)
     std::cout << "ScavTrap " << name << " is born !" << std::endl;
 }
 
+ScavTrap::ScavTrap(ScavTrap const& toCopy)
+	: ScavTrap(toCopy),
+{
+    std::cout << "Copy of the ScavTrap " << name << "." << std::endl;
+}
+
 ScavTrap::~ScavTrap(void)
 {
     std::cout << "ScavTrap " << name << " is broken." << std::endl;
