@@ -1,6 +1,6 @@
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
-NAME = harlFilter
+NAME = borderlands4
 SRC= DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}

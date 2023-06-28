@@ -6,6 +6,7 @@
 class ScavTrap: public ClapTrap
 {
     public:
+    
         ScavTrap(std::string name);
 	    ScavTrap(ScavTrap const& toCopy);
 	    ~ScavTrap(void);
@@ -16,5 +17,6 @@ class ScavTrap: public ClapTrap
 
     private:
         ScavTrap(void);
+
 };
 #endif

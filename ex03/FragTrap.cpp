@@ -18,6 +18,12 @@ FragTrap::FragTrap(std::string name)
     std::cout << "FragTrap " << name << " is born !" << std::endl;
 }
 
+FragTrap::FragTrap(FragTrap const& toCopy)
+    : ClapTrap(toCopy)
+{
+    std::cout << "Copy of the ScavTrap " << name << "." << std::endl;
+}
+
 ~FragTrap(void)
 {
     std::cout << "FragTrap " << name << " is broken." << std::endl;

@@ -28,6 +28,5 @@ class ClapTrap
 
         ClapTrap(void);
 
-
 };
 #endif
