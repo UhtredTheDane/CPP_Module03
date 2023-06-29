@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/29 20:39:25 by agengemb          #+#    #+#             */
+/*   Updated: 2023/06/29 21:37:39 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
 {
-    ClapTrap yugi("Yugi");
-    ScavTrap kaiba("Kaiba");
+	ClapTrap yugi("Yugi");
+	ScavTrap kaiba("Kaiba");
 	ScavTrap yamiYugi("Yami Yugi");
-    ClapTrap yugiCopy(yamiYugi);
+	ScavTrap yugiCopy(yamiYugi);
 
-    kaiba.attack(yugi.getName());
+	kaiba.attack(yugi.getName());
 	yugi.takeDamage(kaiba.getAttackDamage());
-    yugi.beRepaired(1);
+	yugi.beRepaired(1);
 
 	yugi.attack(kaiba.getName());
 
@@ -29,7 +41,7 @@ int main(void)
 	yugiCopy.takeDamage(kaiba.getAttackDamage());
 	yugiCopy.guardGate();
 	yugiCopy.beRepaired(20);
-	
+
 	yugiCopy.attack(kaiba.getName());
 	kaiba.takeDamage(yugiCopy.getAttackDamage());
 	yugiCopy.attack(kaiba.getName());
@@ -37,5 +49,5 @@ int main(void)
 	yugiCopy.attack(kaiba.getName());
 	kaiba.takeDamage(yugiCopy.getAttackDamage());
 
-    return (0);
+	return (0);
 }

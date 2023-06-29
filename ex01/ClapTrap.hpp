@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/29 20:37:26 by agengemb          #+#    #+#             */
+/*   Updated: 2023/06/29 20:38:07 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
@@ -5,28 +17,28 @@
 
 class ClapTrap
 {
-    public:
+	public:
 
-        ClapTrap(std::string name);
-	ClapTrap(ClapTrap const& toCopy);
-        ClapTrap& operator=(ClapTrap const& toAffect);
-        ~ClapTrap(void);
-	
-        int getAttackDamage(void);
-	std::string getName(void);
+		ClapTrap(std::string name);
+		ClapTrap(ClapTrap const& toCopy);
+		ClapTrap& operator=(ClapTrap const& toAffect);
+		~ClapTrap(void);
 
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
+		int getAttackDamage(void);
+		std::string getName(void);
 
-    protected:
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 
-        std::string name;
-        int hit_points;
-        int energy_points;
-        int attack_damage;
+	protected:
 
-        ClapTrap(void);
+		std::string name;
+		int hit_points;
+		int energy_points;
+		int attack_damage;
+
+		ClapTrap(void);
 
 };
 #endif
