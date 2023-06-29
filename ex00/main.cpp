@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/29 20:33:14 by agengemb          #+#    #+#             */
+/*   Updated: 2023/06/29 20:34:18 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 int main(void)
@@ -14,23 +26,23 @@ int main(void)
 	yugi.beRepaired(1);
 
 	std::cout << std::endl;
-	
+
 	yugiCopy.attack(kaiba.getName());
 	kaiba.takeDamage(yugiCopy.getAttackDamage());
 
-	
+
 	std::cout << std::endl;
-	
+
 	makuba.attack(yugi.getName());
 	yugi.takeDamage(makuba.getAttackDamage());
 
 
 	std::cout << std::endl;
-	
+
 	makuba = kaiba;
 
 	std::cout << std::endl;
-	
+
 	makuba.attack(yugiCopy.getName());
 	yugiCopy.takeDamage(makuba.getAttackDamage());
 	makuba.attack(yugiCopy.getName());
@@ -49,9 +61,9 @@ int main(void)
 	yugiCopy.takeDamage(makuba.getAttackDamage());
 	makuba.attack(yugiCopy.getName());
 	yugiCopy.takeDamage(makuba.getAttackDamage());
-	
+
 	std::cout << std::endl;
-	
+
 	makuba.attack(yugiCopy.getName());
 
 	std::cout << std::endl;
