@@ -21,7 +21,7 @@ FragTrap::FragTrap(std::string name)
 FragTrap::FragTrap(FragTrap const& toCopy)
     : ClapTrap(toCopy)
 {
-    std::cout << "Copy of the ScavTrap " << name << "." << std::endl;
+    std::cout << "Copy of the FragTrap " << name << "." << std::endl;
 }
 
 ~FragTrap(void)
