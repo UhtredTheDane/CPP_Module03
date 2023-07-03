@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/03 17:02:23 by agengemb          #+#    #+#             */
+/*   Updated: 2023/07/03 18:09:03 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRAGTRAP_HHP
 # define FRAGTRAP_HHP
 
@@ -5,17 +17,17 @@
 
 class FragTrap: public ClapTrap
 {
-    public:
+	public:
 
-        FragTrap(std::string name);
-        FragTrap::FragTrap(FragTrap const& toCopy);
-        ~FragTrap(void);
-        
-        void highFivesGuys(void);
+		FragTrap(std::string name);
+		FragTrap(FragTrap const& toCopy);
+		~FragTrap(void);
 
-    private:
+		void highFivesGuys(void);
 
-        FragTrap(void);
-        
+	private:
+
+		FragTrap(void);
+
 };
 #endif
