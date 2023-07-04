@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:37:39 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/30 16:07:23 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:51:16 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
 	public:
 
@@ -27,7 +27,7 @@ class ScavTrap: public ClapTrap
 
 		void guardGate(void);
 
-	private:
+	protected:
 
 		bool	isGuardMod;
 		ScavTrap(void);

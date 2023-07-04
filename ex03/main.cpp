@@ -1,27 +1,39 @@
-#include "ClapTrap.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/04 16:02:19 by agengemb          #+#    #+#             */
+/*   Updated: 2023/07/04 17:15:42 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-    ClapTrap c1("Yugi");
-    ClapTrap c2("Kaiba");
-  	ClapTrap c3("Makuba");
-	ClapTrap c4(c1);
-	
-    c2.attack(c1.getName());
-    c1.beRepaired(1);
-	c3 = c2;
-	c4.attack(c2.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
-	c3.attack(c1.getName());
+	ClapTrap yugi("Yugi");	
+	DiamondTrap	exodia("Exodia");
+	DiamondTrap	yamiYugi(exodia);
+	DiamondTrap	test("test");
 
-    return (0);
+	std::cout << std::endl;
+
+	exodia.whoAmI();
+	exodia.beRepaired(10);	
+	
+	DiamondTrap exodiaCopy(exodia);
+
+	exodia.guardGate();
+	
+	std::cout << std::endl;
+	
+	test = exodia;
+	test.guardGate();
+	
+	std::cout << std::endl;
+	
+	return (0);
 }
