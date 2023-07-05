@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 16:02:19 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/04 17:15:42 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/05 11:38:11 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,39 @@
 
 int main(void)
 {
-	ClapTrap yugi("Yugi");	
-	DiamondTrap	exodia("Exodia");
-	DiamondTrap	yamiYugi(exodia);
-	DiamondTrap	test("test");
-
+	ClapTrap	yugi("Yugi");
 	std::cout << std::endl;
-
+	DiamondTrap	exodia("Exodia");		
+	std::cout << std::endl;
+	DiamondTrap	kaiba("Kaiba");
+	std::cout << std::endl;
+	DiamondTrap	makuba("Makuba");
+	std::cout << std::endl;
+	
 	exodia.whoAmI();
 	exodia.beRepaired(10);	
-	
-	DiamondTrap exodiaCopy(exodia);
-
 	exodia.guardGate();
-	
+	exodia.highFivesGuys();
 	std::cout << std::endl;
-	
-	test = exodia;
-	test.guardGate();
-	
+
+	DiamondTrap	exodiaCopy(exodia);
 	std::cout << std::endl;
-	
+
+	exodiaCopy.whoAmI();
+	exodiaCopy.beRepaired(10);	
+	exodiaCopy.guardGate();
+	exodiaCopy.highFivesGuys();
+	std::cout << std::endl;
+
+	kaiba.attack(yugi.getName());
+	yugi.takeDamage(kaiba.getAttackDamage());
+	std::cout << std::endl;
+
+	makuba = kaiba;
+	std::cout << std::endl;
+
+	exodiaCopy.attack(makuba.getName());
+	makuba.takeDamage(exodiaCopy.getAttackDamage());
+	std::cout << std::endl;	
 	return (0);
 }
