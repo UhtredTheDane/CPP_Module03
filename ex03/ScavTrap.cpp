@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:38:53 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/30 16:06:58 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:03:06 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,24 @@ ScavTrap::ScavTrap(std::string name)
 ScavTrap::ScavTrap(ScavTrap const& toCopy)
 	: ClapTrap(toCopy)
 {
-	std::cout << "Copy of the ScavTrap " << name << "." << std::endl;
+	std::cout << "Copy of the ScavTrap " << toCopy.name << "." << std::endl;
+	*this = toCopy;
+}
+
+ScavTrap& ScavTrap::operator=(ScavTrap const& toAffect)
+{
+	if (this != &toAffect)
+	{
+		std::cout << "ScavTrap " << toAffect.name << " is affect to ScavTrap " << name  << "." << std::endl;
+		name = toAffect.name;
+		hit_points = toAffect.hit_points;
+		energy_points = toAffect.energy_points;
+		attack_damage = toAffect.attack_damage;
+		isGuardMod = toAffect.isGuardMod;
+	}
+	else
+		std::cout << "ScavTrap " << name << " can't afffect himself."  << std::endl;
+	return(*this);
 }
 
 ScavTrap::~ScavTrap(void)

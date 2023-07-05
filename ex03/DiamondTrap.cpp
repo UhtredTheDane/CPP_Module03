@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:01:39 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/05 11:42:15 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:02:13 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,19 @@ DiamondTrap::DiamondTrap(std::string name)
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const& toCopy)
-	:ClapTrap(toCopy),
+	: ClapTrap(toCopy),
 	ScavTrap(toCopy),
 	FragTrap(toCopy)
 {
-	std::cout << "Copy of the DiamondTrap " << name << "." << std::endl;
+	std::cout << "Copy of the DiamondTrap " << toCopy.name << "." << std::endl;
 	*this = toCopy;
 }
 
 DiamondTrap& DiamondTrap::operator=(DiamondTrap const& toAffect)
 {
 	if (this != &toAffect)
-	{		
+	{	
+		ClapTrap::name = toAffect.ClapTrap::name;	
 		name = toAffect.name;
 		hit_points = toAffect.hit_points;
 		energy_points = toAffect.energy_points;

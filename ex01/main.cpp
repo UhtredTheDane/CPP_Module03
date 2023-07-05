@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:39:25 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/30 16:37:27 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/05 15:47:47 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ int main(void)
 {
 	ClapTrap yugi("Yugi");
 	ScavTrap kaiba("Kaiba");
+	ScavTrap kaibaCopy(kaiba);
 	ScavTrap yamiYugi("Yami Yugi");
-	ScavTrap yugiCopy(yamiYugi);
+	ScavTrap yamiYugi2("Yami Yugi 2");
 
 	std::cout << std::endl;
 
@@ -27,46 +28,46 @@ int main(void)
 	yugi.beRepaired(1);
 
 	std::cout << std::endl;
-	
+
 	yugi.attack(kaiba.getName());
 	kaiba.takeDamage(yugi.getAttackDamage());
 
 	std::cout << std::endl;
-	
-	kaiba.attack(yugi.getName());
-	yugi.takeDamage(kaiba.getAttackDamage());
-	
+
+	kaibaCopy.attack(yugi.getName());
+	yugi.takeDamage(kaibaCopy.getAttackDamage());
+
 	std::cout << std::endl;
-	
-	kaiba.attack(yamiYugi.getName());
-	yamiYugi.takeDamage(kaiba.getAttackDamage());
+
+	kaibaCopy.attack(yamiYugi.getName());
+	yamiYugi.takeDamage(kaibaCopy.getAttackDamage());
 	yamiYugi.guardGate();
 	yamiYugi.beRepaired(20);
 	yamiYugi.attack(kaiba.getName());
 
 	std::cout << std::endl;
-	
-	yugiCopy = yamiYugi;
 
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
-	yugiCopy.guardGate();
-	yugiCopy.beRepaired(20);
+	yamiYugi2 = yamiYugi;
+
+	kaibaCopy.attack(yamiYugi2.getName());
+	yamiYugi2.takeDamage(kaiba.getAttackDamage());
+	yamiYugi2.guardGate();
+	yamiYugi2.beRepaired(20);
 
 	std::cout << std::endl;
-	
-	yugiCopy.attack(kaiba.getName());
-	kaiba.takeDamage(yugiCopy.getAttackDamage());
-	yugiCopy.attack(kaiba.getName());
-	kaiba.takeDamage(yugiCopy.getAttackDamage());
-	yugiCopy.attack(kaiba.getName());
-	kaiba.takeDamage(yugiCopy.getAttackDamage());
-	yugiCopy.attack(kaiba.getName());
-	kaiba.takeDamage(yugiCopy.getAttackDamage());
-	yugiCopy.attack(kaiba.getName());
-	kaiba.takeDamage(yugiCopy.getAttackDamage());
-	yugiCopy.attack(kaiba.getName());
-	kaiba.takeDamage(yugiCopy.getAttackDamage());
+
+	yamiYugi2.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi2.getAttackDamage());
+	yamiYugi2.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi2.getAttackDamage());
+	yamiYugi2.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi2.getAttackDamage());
+	yamiYugi2.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi2.getAttackDamage());
+	yamiYugi2.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi2.getAttackDamage());
+	yamiYugi2.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi2.getAttackDamage());
 
 	std::cout << std::endl;
 	return (0);

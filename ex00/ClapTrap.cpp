@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:31:22 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/29 20:33:08 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/05 14:33:44 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::ClapTrap(ClapTrap const& toCopy)
 	: name(toCopy.name)
 {
-	*this = toCopy;
 	std::cout << "Copy of the CalpTrap " << name << "." << std::endl;
+	*this = toCopy;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& toAffect)

@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:33:14 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/29 20:34:18 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/05 14:33:04 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,10 @@ int main(void)
 	yugiCopy.attack(kaiba.getName());
 	kaiba.takeDamage(yugiCopy.getAttackDamage());
 
-
 	std::cout << std::endl;
 
 	makuba.attack(yugi.getName());
 	yugi.takeDamage(makuba.getAttackDamage());
-
 
 	std::cout << std::endl;
 
