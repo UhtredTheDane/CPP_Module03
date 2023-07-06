@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:37:26 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/29 20:38:07 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 09:48:05 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class ClapTrap
 		int hit_points;
 		int energy_points;
 		int attack_damage;
-
+		
 		ClapTrap(void);
 
 };

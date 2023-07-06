@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:39:25 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/05 15:47:47 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 09:52:27 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,14 @@ int main(void)
 	yamiYugi.guardGate();
 	yamiYugi.beRepaired(20);
 	yamiYugi.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi.getAttackDamage());
 
 	std::cout << std::endl;
 
 	yamiYugi2 = yamiYugi;
 
 	kaibaCopy.attack(yamiYugi2.getName());
-	yamiYugi2.takeDamage(kaiba.getAttackDamage());
+	yamiYugi2.takeDamage(kaibaCopy.getAttackDamage());
 	yamiYugi2.guardGate();
 	yamiYugi2.beRepaired(20);
 
@@ -66,6 +67,9 @@ int main(void)
 	kaiba.takeDamage(yamiYugi2.getAttackDamage());
 	yamiYugi2.attack(kaiba.getName());
 	kaiba.takeDamage(yamiYugi2.getAttackDamage());
+	
+	std::cout << std::endl;
+	
 	yamiYugi2.attack(kaiba.getName());
 	kaiba.takeDamage(yamiYugi2.getAttackDamage());
 
