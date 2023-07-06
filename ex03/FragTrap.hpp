@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 17:02:23 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/05 15:56:38 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:29:09 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class FragTrap: virtual public ClapTrap
 
 		FragTrap(std::string name);
 		FragTrap(FragTrap const& toCopy);
+		FragTrap&	operator=(FragTrap const& toAffect);
 		~FragTrap(void);
 
 		void highFivesGuys(void);

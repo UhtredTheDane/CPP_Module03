@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:01:39 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/05 16:02:13 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:36:06 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ DiamondTrap::DiamondTrap(std::string name)
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const& toCopy)
-	: ClapTrap(toCopy),
-	ScavTrap(toCopy),
-	FragTrap(toCopy)
+	: ClapTrap(),
+	ScavTrap(),
+	FragTrap()
 {
 	std::cout << "Copy of the DiamondTrap " << toCopy.name << "." << std::endl;
 	*this = toCopy;
@@ -49,13 +49,13 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap const& toAffect)
 {
 	if (this != &toAffect)
 	{	
+		std::cout << "DiamondTrap " << toAffect.name << " is affect to DiamondTrap " << ClapTrap::name  << "." << std::endl;
 		ClapTrap::name = toAffect.ClapTrap::name;	
 		name = toAffect.name;
 		hit_points = toAffect.hit_points;
 		energy_points = toAffect.energy_points;
 		attack_damage = toAffect.attack_damage;
 		isGuardMod = toAffect.isGuardMod;
-		std::cout << "DiamondTrap " << toAffect.name << " is affect to DiamondTrap " << name  << "." << std::endl;
 	}
 	return (*this);
 }
@@ -80,5 +80,5 @@ void DiamondTrap::whoAmI(void)
 		std::cout << "attack_damage: " << attack_damage << std::endl;
 	}
 	else
-		std::cout << "DiamondTrap " << name << " can't because he is dead !" << std::endl;
+		std::cout << "DiamondTrap " << name << " can't talk because he is dead !" << std::endl;
 }

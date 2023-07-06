@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:38:53 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/06 10:11:29 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:22:55 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(std::string name)
 }
 
 ScavTrap::ScavTrap(ScavTrap const& toCopy)
-	: ClapTrap(toCopy)
+	: ClapTrap()
 {
 	std::cout << "Copy of the ScavTrap " << name << "." << std::endl;
 	*this = toCopy;
