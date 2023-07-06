@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:39:25 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/03 18:09:13 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:17:33 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 int main(void)
 {
-	ClapTrap yugi("Yugi");
-	ScavTrap kaiba("Kaiba");
-	FragTrap yamiYugi("Yami Yugi");
-	FragTrap yugiCopy(yamiYugi);
+	ClapTrap	yugi("Yugi");
+	ScavTrap	kaiba("Kaiba");
+	FragTrap	yamiYugi("Yami Yugi");
+	FragTrap	yugiCopy(yamiYugi);
+	FragTrap	test("Test");
 
 	std::cout << std::endl;
 
@@ -43,10 +44,9 @@ int main(void)
 	yamiYugi.highFivesGuys();
 	yamiYugi.beRepaired(20);
 	yamiYugi.attack(kaiba.getName());
+	kaiba.takeDamage(yamiYugi.getAttackDamage());
 
 	std::cout << std::endl;
-
-	yugiCopy = yamiYugi;
 
 	kaiba.attack(yugiCopy.getName());
 	yugiCopy.takeDamage(kaiba.getAttackDamage());
@@ -55,22 +55,26 @@ int main(void)
 
 	std::cout << std::endl;
 
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
-	kaiba.attack(yugiCopy.getName());
-	yugiCopy.takeDamage(kaiba.getAttackDamage());
+	test = yugiCopy;
 
 	std::cout << std::endl;
 
-	yugiCopy.highFivesGuys();
+	kaiba.attack(test.getName());
+	test.takeDamage(kaiba.getAttackDamage());
+	kaiba.attack(test.getName());
+	test.takeDamage(kaiba.getAttackDamage());
+	kaiba.attack(test.getName());
+	test.takeDamage(kaiba.getAttackDamage());
+	kaiba.attack(test.getName());
+	test.takeDamage(kaiba.getAttackDamage());
+	kaiba.attack(test.getName());
+	test.takeDamage(kaiba.getAttackDamage());
+	kaiba.attack(test.getName());
+	test.takeDamage(kaiba.getAttackDamage());
+
+	std::cout << std::endl;
+
+	test.highFivesGuys();
 
 	std::cout << std::endl;
 	return (0);

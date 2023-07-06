@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:38:53 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/05 15:45:52 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:11:29 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ ScavTrap& ScavTrap::operator=(ScavTrap const& toAffect)
 	}
 	else
 		std::cout << "ScavTrap " << name << " can't afffect himself."  << std::endl;
-	return(*this);
+	return (*this);
 }
 
 ScavTrap::~ScavTrap(void)

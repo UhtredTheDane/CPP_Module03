@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 20:37:39 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/05 15:10:21 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/06 09:54:49 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class ScavTrap: public ClapTrap
 	private:
 
 		bool	isGuardMod;
+
 		ScavTrap(void);
 
 };
